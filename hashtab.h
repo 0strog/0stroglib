@@ -22,3 +22,15 @@ typedef struct List {
     ListNode* tail;
     size_t size;
 } List;
+
+typedef struct Hashtab {
+    List list;
+    int64_t hash;
+} Hashtab;
+
+extern List* new_list(List* list, ListNode* node);
+extern void free_list(List* list);
+
+extern void push_front_list(List* list, ListNode* node);
+extern ListVariable_t delete_from_list(List* list, ListVariable_t key);
+extern void print_list(List* list);
